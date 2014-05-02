@@ -72,8 +72,6 @@ kural_dict={
 'kalaignar':kalaignar
 }
 
-print(kural_dict)
-
 #print(simplejson.dumps(kural_dict))
 with open('data.json', 'wb') as fp:
 	json.dump(kural_dict, fp,ensure_ascii=False,sort_keys = True, indent = 4,)
