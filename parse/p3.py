@@ -75,7 +75,36 @@ kural_dict={
 print(kural_dict)
 
 #print(simplejson.dumps(kural_dict))
-with open('data.json', 'wb') as fp:
-	json.dump(kural_dict, fp,ensure_ascii=False,sort_keys = True, indent = 4,)
+#with open('data.json', 'wb') as fp:
+#	json.dump(kural_dict, fp,ensure_ascii=False,sort_keys = True, indent = 4,)
+
+
+kural_tet=open('kural.txt','w')
+kural_tet.write(number)
+kural_tet.write("\n\n")
+
+kural_tet.write(kural_text)
+kural_tet.write("\n\n")
+
+kural_tet.write(parimel)
+kural_tet.write("\n\n")
+
+kural_tet.write(manakudavar)
+kural_tet.write("\n\n")
+
+kural_tet.write(devaneyar)
+kural_tet.write("\n\n")
+
+kural_tet.write(gupope)
+kural_tet.write("\n\n")
+
+kural_tet.write(yogi)
+kural_tet.write("\n\n")
+
+kural_tet.write(kalaignar)
+kural_tet.write("\n\n")
+
+kural_tet.close()
+
 
 
