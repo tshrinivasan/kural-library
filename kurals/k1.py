@@ -32,10 +32,12 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
 
-br.open('http://tamilvu.org/slet/l2100/l2100sec.jsp?&book_id=31&head_id=26&auth_id=29:31:30:32:33:34:35:')
+
 
 
 def get_kural(no):
+	br = mechanize.Browser()
+	br.open('http://tamilvu.org/slet/l2100/l2100sec.jsp?&book_id=31&head_id=26&auth_id=29:31:30:32:33:34:35:')
 	r=br.open('http://tamilvu.org/slet/l2100/l2100uri.jsp?song_no=' + str(no))
 	html = r.read()
 
@@ -44,6 +46,7 @@ def get_kural(no):
 	
 	filename = str(no)+ '.txt'
         open(filename, 'wb').write(raw)
+	br.close()
 
 
 start_kural = int(sys.argv[1])

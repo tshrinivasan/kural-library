@@ -44,7 +44,7 @@ def get_kural(no):
 	
 	filename = str(no)+ '.txt'
         open(filename, 'wb').write(raw)
-
+	br.close()
 
 start_kural = int(sys.argv[1])
 
