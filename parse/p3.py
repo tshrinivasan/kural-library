@@ -81,7 +81,8 @@ for root, dirs, files in os.walk("../kurals"):
 			print(kural_dict)
 
 	#print(simplejson.dumps(kural_dict))
-			with open(str(file_name_only) +'.json', 'w') as fp:
+			json_file = '%0*d' % (4, int(file_name_only) )
+			with open(json_file +'.json', 'w') as fp:
 				json.dump(kural_dict, fp,ensure_ascii=False,sort_keys=True,indent = 4,)
 
 
